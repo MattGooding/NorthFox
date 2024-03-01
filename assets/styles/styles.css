@@ -63,18 +63,13 @@ footer {
 
 .slide {
     opacity: 0;
-    /* Initially hide the section */
     transform: translateY(100px);
-    /* Slide down by 100px */
     transition: opacity 0.5s ease, transform 0.5s ease;
-    /* Add transitions */
 }
 
 .slide.active {
     opacity: 1;
-    /* Show the section */
     transform: translateY(0);
-    /* Slide up to its original position */
 }
 
 @keyframes slideInRight {
@@ -100,7 +95,6 @@ footer {
 /* Tablet Breakpoint */
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
     h1 {
-        /* Your tablet styles for h1 here */
         font-size: 4rem;
         line-height: 3.5rem;
     }
@@ -120,7 +114,6 @@ footer {
 /* Mobile Breakpoint */
 @media only screen and (max-width: 600px) {
     h1 {
-        /* Your mobile styles for h1 here */
         font-size: 2.25rem;
         line-height: 2rem;
     }
