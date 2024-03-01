@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Montserrat", sans-serif;
     overflow-x: hidden;
@@ -27,6 +31,7 @@ h1 {
     bottom: -15%;
     right: -5%;
     animation: slideInRight .5s ease-in-out forwards;
+    overflow-x: hidden;
 }
 
 .hero-section .row {
@@ -56,14 +61,20 @@ footer {
     padding-top: 100px;
 }
 
-@keyframes slideIn {
-    0% {
-        transform: translateX(-100%);
-    }
+.slide {
+    opacity: 0;
+    /* Initially hide the section */
+    transform: translateY(100px);
+    /* Slide down by 100px */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    /* Add transitions */
+}
 
-    100% {
-        transform: translateX(0);
-    }
+.slide.active {
+    opacity: 1;
+    /* Show the section */
+    transform: translateY(0);
+    /* Slide up to its original position */
 }
 
 @keyframes slideInRight {
@@ -119,7 +130,8 @@ footer {
     }
 
     .spiral {
-        bottom: 10%;
-        right: -2%;
+        bottom: 5%;
+        right: 1%;
+        min-height: 300px;
     }
 }
